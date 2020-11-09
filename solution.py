@@ -124,7 +124,7 @@ def ping(host, timeout=1):
     delaylist=[]
     for i in range(0,4):
         delay = doOnePing(dest, timeout)
-        print(delay)
+        #print(delay)
         delaylist.append(delay)
         time.sleep(1)  # one second
     mean = sum(delaylist) / len(delaylist) 
@@ -135,4 +135,4 @@ def ping(host, timeout=1):
     return vars
 
 if __name__ == '__main__':
-    ping("google")
+    print(ping("google.co.il"))
